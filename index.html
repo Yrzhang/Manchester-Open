@@ -31,22 +31,36 @@
             margin-bottom: 12px;
         }
 
-        /* Header layout */
-        .hero-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 18px;
-            flex-wrap: wrap;
+        /* ===== HEADER FIX ===== */
+        .hero-wrapper {
+            position: relative;
+            text-align: center;
         }
 
-        .hero-header img {
-            width: 70px;
+        .hero-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hero-icon img {
+            width: 90px;   /* bigger icon */
             height: auto;
         }
 
-        .hero-text {
-            text-align: left;
+        .hero-title {
+            display: inline-block;
+        }
+
+        @media (max-width: 576px) {
+            .hero-icon img {
+                width: 60px;
+            }
+
+            .hero-icon {
+                left: 10px;
+            }
         }
     </style>
 </head>
@@ -72,18 +86,18 @@
     </div>
 </nav>
 
-<!-- Header (UPDATED WITH ICON) -->
+<!-- Header (FIXED LAYOUT) -->
 <header class="bg-primary bg-gradient text-white">
-    <div class="container px-4 text-center">
+    <div class="container px-4 py-5 hero-wrapper">
 
-        <div class="hero-header">
+        <!-- LEFT ICON -->
+        <div class="hero-icon">
             <img src="MancIcon.png" alt="Manchester Open Icon">
-
-            <div class="hero-text">
-                <h1 class="fw-bolder mb-1">Manchester Open Go Tournament 2026</h1>
-                <p class="lead mb-0">15–16 August 2026 · Manchester, UK</p>
-            </div>
         </div>
+
+        <!-- CENTER TITLE -->
+        <h1 class="fw-bolder">Manchester Open Go Tournament 2026</h1>
+        <p class="lead mb-0">15–16 August 2026 · Manchester, UK</p>
 
         <a class="btn btn-lg btn-light mt-3" href="#about">View Details</a>
     </div>
