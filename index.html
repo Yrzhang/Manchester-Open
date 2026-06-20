@@ -31,59 +31,55 @@
             margin-bottom: 12px;
         }
 
-        /* ===== HEADER (LEFT + CENTER + RIGHT) ===== */
+        /* ================= HEADER ================= */
+
         .hero-wrapper {
-            position: relative;
-            text-align: center;
-            padding: 0 !important;
+            background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+            color: white;
+        }
+
+        .hero-inner {
             display: flex;
             align-items: center;
-            justify-content: center;
-            min-height: 0;
+            justify-content: space-between;
+            padding: 10px 15px;
+            gap: 15px;
         }
 
-        .hero-icon-left,
-        .hero-icon-right {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .hero-icon-left {
-            left: 20px;
-        }
-
-        .hero-icon-right {
-            right: 20px;
-        }
-
-        .hero-icon-left img,
-        .hero-icon-right img {
-            width: 160px;   /* SAME HEIGHT FOR BOTH */
+        .hero-icon img {
+            width: 140px;
             height: auto;
             display: block;
         }
 
+        .hero-text {
+            text-align: center;
+            flex: 1;
+        }
+
         .hero-text h1 {
             margin: 0;
+            font-size: 2rem;
         }
 
         .hero-text p {
             margin: 0;
         }
 
-        @media (max-width: 576px) {
-            .hero-icon-left img,
-            .hero-icon-right img {
-                width: 110px;
+        /* ================= MOBILE FIX ================= */
+        @media (max-width: 768px) {
+            .hero-inner {
+                flex-direction: column;
+                text-align: center;
+                padding: 12px 10px;
             }
 
-            .hero-icon-left {
-                left: 10px;
+            .hero-icon img {
+                width: 90px;
             }
 
-            .hero-icon-right {
-                right: 10px;
+            .hero-text h1 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -110,12 +106,13 @@
     </div>
 </nav>
 
-<!-- HEADER (NOW WITH TWO ICONS) -->
-<header class="bg-primary bg-gradient text-white">
-    <div class="container hero-wrapper">
+<!-- HEADER (FIXED) -->
+<header class="hero-wrapper">
+
+    <div class="container hero-inner">
 
         <!-- LEFT ICON -->
-        <div class="hero-icon-left">
+        <div class="hero-icon">
             <img src="MancIcon.png" alt="Manchester Open Icon">
         </div>
 
@@ -126,7 +123,7 @@
         </div>
 
         <!-- RIGHT ICON -->
-        <div class="hero-icon-right">
+        <div class="hero-icon">
             <img src="MancGoClub.png" alt="Manchester Go Club Icon">
         </div>
 
