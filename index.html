@@ -30,6 +30,24 @@
         .lead {
             margin-bottom: 12px;
         }
+
+        /* ✅ NEW: header layout */
+        .hero-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-header img {
+            width: 70px;   /* adjust if you want bigger/smaller */
+            height: auto;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -54,12 +72,20 @@
     </div>
 </nav>
 
-<!-- Header -->
+<!-- Header (UPDATED) -->
 <header class="bg-primary bg-gradient text-white">
     <div class="container px-4 text-center">
-        <h1 class="fw-bolder">Manchester Open Go Tournament 2026</h1>
-        <p class="lead">15–16 August 2026 · Manchester, UK</p>
-        <a class="btn btn-lg btn-light" href="#about">View Details</a>
+
+        <div class="hero-header">
+            <img src="MancIcon.png" alt="Manchester Open Icon">
+
+            <div class="hero-text">
+                <h1 class="fw-bolder mb-1">Manchester Open Go Tournament 2026</h1>
+                <p class="lead mb-0">15–16 August 2026 · Manchester, UK</p>
+            </div>
+        </div>
+
+        <a class="btn btn-lg btn-light mt-3" href="#about">View Details</a>
     </div>
 </header>
 
