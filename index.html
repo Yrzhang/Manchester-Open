@@ -31,8 +31,7 @@
             margin-bottom: 12px;
         }
 
-        /* ================= HEADER ================= */
-
+        /* HEADER */
         .hero-wrapper {
             background: linear-gradient(90deg, #0d6efd, #0b5ed7);
             color: white;
@@ -66,12 +65,11 @@
             margin: 0;
         }
 
-        /* ================= MOBILE FIX ================= */
+        /* MOBILE */
         @media (max-width: 768px) {
             .hero-inner {
                 flex-direction: column;
                 text-align: center;
-                padding: 12px 10px;
             }
 
             .hero-icon img {
@@ -106,23 +104,19 @@
     </div>
 </nav>
 
-<!-- HEADER (FIXED) -->
+<!-- HEADER -->
 <header class="hero-wrapper">
-
     <div class="container hero-inner">
 
-        <!-- LEFT ICON -->
         <div class="hero-icon">
             <img src="MancIcon.png" alt="Manchester Open Icon">
         </div>
 
-        <!-- CENTER TEXT -->
         <div class="hero-text">
             <h1 class="fw-bolder">Manchester Open Go Tournament 2026</h1>
             <p class="lead">15–16 August 2026 · Manchester, UK</p>
         </div>
 
-        <!-- RIGHT ICON -->
         <div class="hero-icon">
             <img src="MancGoClub.png" alt="Manchester Go Club Icon">
         </div>
@@ -148,16 +142,32 @@
                 </ul>
 
                 <h5>Venue</h5>
+
                 <p>
                     <strong>Luther King House</strong><br>
                     Brighton Grove, Manchester M14 5JP<br>
-                    <a href="https://lutherkinghouse.co.uk" target="_blank">https://lutherkinghouse.co.uk</a><br><br>
+                    <a href="https://lutherkinghouse.co.uk" target="_blank">
+                        https://lutherkinghouse.co.uk
+                    </a><br><br>
 
                     Approximately 2 miles from Manchester Piccadilly Station.<br>
                     Bus routes 41, 42, 43 and 142 connect to city centre.<br><br>
 
                     Budget accommodation available at the venue (contact directly).
                 </p>
+
+                <!-- ✅ GOOGLE MAP EMBED -->
+                <div style="margin-top:15px;">
+                    <iframe
+                        src="https://www.google.com/maps?q=Luther%20King%20House%2C%20Manchester%20M14%205JP&output=embed"
+                        width="100%"
+                        height="350"
+                        style="border:0; border-radius:10px;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
             </div>
         </div>
     </div>
