@@ -31,32 +31,37 @@
             margin-bottom: 12px;
         }
 
-        /* ===== ULTRA TIGHT HEADER ===== */
+        /* ===== HEADER (LEFT + CENTER + RIGHT) ===== */
         .hero-wrapper {
             position: relative;
             text-align: center;
-            padding: 0 !important;        /* 🔥 remove all vertical space */
-            min-height: 0;
+            padding: 0 !important;
             display: flex;
-            align-items: center;          /* vertical alignment based on icon */
+            align-items: center;
             justify-content: center;
+            min-height: 0;
         }
 
-        .hero-icon {
+        .hero-icon-left,
+        .hero-icon-right {
             position: absolute;
-            left: 20px;
             top: 50%;
             transform: translateY(-50%);
         }
 
-        .hero-icon img {
-            width: 160px;   /* big icon */
-            height: auto;
-            display: block;
+        .hero-icon-left {
+            left: 20px;
         }
 
-        .hero-text {
-            text-align: center;
+        .hero-icon-right {
+            right: 20px;
+        }
+
+        .hero-icon-left img,
+        .hero-icon-right img {
+            width: 160px;   /* SAME HEIGHT FOR BOTH */
+            height: auto;
+            display: block;
         }
 
         .hero-text h1 {
@@ -68,12 +73,17 @@
         }
 
         @media (max-width: 576px) {
-            .hero-icon img {
+            .hero-icon-left img,
+            .hero-icon-right img {
                 width: 110px;
             }
 
-            .hero-icon {
+            .hero-icon-left {
                 left: 10px;
+            }
+
+            .hero-icon-right {
+                right: 10px;
             }
         }
     </style>
@@ -100,19 +110,24 @@
     </div>
 </nav>
 
-<!-- HEADER (NOW VERY TIGHT) -->
+<!-- HEADER (NOW WITH TWO ICONS) -->
 <header class="bg-primary bg-gradient text-white">
     <div class="container hero-wrapper">
 
         <!-- LEFT ICON -->
-        <div class="hero-icon">
+        <div class="hero-icon-left">
             <img src="MancIcon.png" alt="Manchester Open Icon">
         </div>
 
         <!-- CENTER TEXT -->
         <div class="hero-text">
             <h1 class="fw-bolder">Manchester Open Go Tournament 2026</h1>
-            <p class="lead">15–16 August 2026 · Luther King House, Manchester, UK</p>
+            <p class="lead">15–16 August 2026 · Manchester, UK</p>
+        </div>
+
+        <!-- RIGHT ICON -->
+        <div class="hero-icon-right">
+            <img src="MancGoClub.png" alt="Manchester Go Club Icon">
         </div>
 
     </div>
@@ -159,7 +174,7 @@
                 <h2>Schedule</h2>
 
                 <h5>Friday 14 August</h5>
-                <p>18:00 onwards – Casual Go & drinks at "The Bank" (57 Mosley Street, Manchester)</p>
+                <p>18:00 onwards – Casual Go & drinks at The Bank (57 Mosley Street, Manchester)</p>
 
                 <h5>Saturday 15 August</h5>
                 <ul>
