@@ -81,16 +81,18 @@
             }
         }
 
-        /* Small inline image for schedule */
+        /* Inline image for schedule (enlarged) */
         .inline-thumb {
-            height: 40px;
+            height: 120px;     /* ~3x the previous 40px */
+            max-height: 120px;
+            width: auto;
             vertical-align: middle;
-            margin-left: 8px;
+            margin-left: 12px;
             border-radius: 4px;
         }
 
         @media (max-width: 576px) {
-            .inline-thumb { height: 32px; }
+            .inline-thumb { height: 96px; max-height: 96px; }
         }
     </style>
 </head>
