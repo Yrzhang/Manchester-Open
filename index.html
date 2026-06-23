@@ -8,94 +8,186 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="css/styles.css" rel="stylesheet" />
 
-    <style>
-        section {
-            padding-top: 35px !important;
-            padding-bottom: 35px !important;
+<style>
+    section {
+        padding: 35px 0 !important;
+    }
+
+    h2 {
+        margin-bottom: 12px;
+    }
+
+    h5 {
+        margin: 18px 0 6px;
+    }
+
+    p,
+    ul {
+        margin-bottom: 10px;
+    }
+
+    .lead {
+        margin-bottom: 12px;
+    }
+
+    /* HEADER */
+    .banner-hero {
+        min-height: 300px;
+        margin-bottom: 1.5rem;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(235, 249, 255, 1) 0%,
+                rgba(235, 249, 255, 0.8) 36%,
+                rgba(235, 249, 255, 0.25) 62%,
+                rgba(235, 249, 255, 0) 100%
+            ),
+            url("MancBanner.png") center / cover;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-hero .hero-inner {
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-hero .hero-text {
+        max-width: 520px;
+    }
+
+    .hero-logo {
+        width: 150px;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+        margin: 0;
+        color: #212429;
+        font-size: clamp(2.1rem, 4vw, 3.7rem);
+        line-height: 1.05;
+        white-space: nowrap;
+    }
+
+    .banner-hero .lead {
+        margin-top: 0.75rem;
+        color: #348fae;
+        font-weight: 600;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-top: 1.25rem;
+    }
+
+    .hero-button {
+        padding: 0.7rem 1.4rem;
+        border-radius: 10px;
+        color: white;
+        background: #ac5e1e;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .hero-button:hover {
+        color: white;
+        background: #e18e42;
+        text-decoration: none;
+    }
+
+    .navbar .container {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-brand {
+        white-space: nowrap;
+        margin-right: 0.75rem;
+    }
+
+    .navbar-toggler {
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+        .banner-hero {
+            min-height: auto;
+            margin-bottom: 1rem;
+            padding: 1.5rem 0 1.75rem;
+            background:
+                linear-gradient(
+                    0deg,
+                    rgba(235, 249, 255, 0.96) 0%,
+                    rgba(235, 249, 255, 0.82) 55%,
+                    rgba(235, 249, 255, 0.25) 100%
+                ),
+                url("MancBanner.png") center / cover;
         }
 
-        h2 {
-            margin-bottom: 12px;
+        .banner-hero .hero-inner {
+            min-height: 0;
+            justify-content: center;
         }
 
-        h5 {
-            margin-top: 18px;
-            margin-bottom: 6px;
-        }
-
-        p, ul {
-            margin-bottom: 10px;
-        }
-
-        .lead {
-            margin-bottom: 12px;
-        }
-
-        /* HEADER */
-        .hero-wrapper {
-            background: linear-gradient(90deg, #0d6efd, #0b5ed7);
-            color: white;
-        }
-
-        .hero-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 15px;
-            gap: 15px;
-        }
-
-        .hero-icon img {
-            width: 140px;
-            height: auto;
-            display: block;
-        }
-
-        .hero-text {
+        .banner-hero .hero-text {
+            max-width: 100%;
             text-align: center;
-            flex: 1;
         }
 
-        .hero-text h1 {
-            margin: 0;
-            font-size: 2rem;
+        .hero-logo {
+            display: block;
+            margin: 3rem auto 0.5rem;
         }
 
-        .hero-text p {
-            margin: 0;
+        .hero-title {
+            font-size: clamp(1.8rem, 8vw, 2.5rem);
+            white-space: normal;
         }
 
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .hero-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-icon img {
-                width: 90px;
-            }
-
-            .hero-text h1 {
-                font-size: 1.4rem;
-            }
+        .banner-hero .lead {
+            margin-top: 0.75rem;
+            font-size: 1rem;
         }
 
-        /* Inline image for schedule (enlarged) */
-        .inline-thumb {
-            height: 200px;     /* user requested size */
-            max-height: 200px;
-            width: auto;
-            vertical-align: middle;
-            margin-left: 12px;
-            border-radius: 4px;
-            display: inline-block;
+        .hero-buttons {
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.1rem;
         }
 
-        @media (max-width: 576px) {
-            .inline-thumb { height: 160px; max-height: 160px; }
+        .hero-button {
+            width: 100%;
+            max-width: 335px;
         }
-    </style>
+    }
+
+    @media (max-width: 360px) {
+        .navbar-brand {
+            font-size: 1rem;
+        }
+
+        .hero-title {
+            font-size: 1.75rem;
+        }
+    }
+
+    /* Inline image for schedule (enlarged) */
+    .inline-thumb {
+        height: 200px;     /* user requested size */
+        max-height: 200px;
+        width: auto;
+        vertical-align: middle;
+        margin-left: 12px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    @media (max-width: 576px) {
+        .inline-thumb { height: 160px; max-height: 160px; }
+    }
+</style>
 </head>
 
 <body id="page-top">
@@ -120,20 +212,19 @@
 </nav>
 
 <!-- HEADER -->
-<header class="hero-wrapper">
+<header class="hero-wrapper banner-hero">
     <div class="container hero-inner">
 
-        <div class="hero-icon">
-            <img src="MancIcon.png" alt="Manchester Open Icon">
-        </div>
-
         <div class="hero-text">
-            <h1 class="fw-bolder">Manchester Open Go Tournament 2026</h1>
+            <img class="hero-logo" src="MancGoClubNoBG.png" alt="Manchester Go Club Icon">
+            <h1 class="hero-title fw-bolder">Manchester Open</h1>
+            <h1 class="hero-title fw-bolder">Go Tournament 2026</h1>
             <p class="lead">15–16 August 2026 · Manchester, UK</p>
-        </div>
 
-        <div class="hero-icon">
-            <img src="MancGoClub.png" alt="Manchester Go Club Icon">
+            <div class="hero-buttons">
+                <a class="hero-button" href="https://www.britgo.org/tournams/manchester/manchester-form.html" target="_blank">Entry Form</a>
+                <a class="hero-button" href="https://www.britgo.org/tournams/manchester/tour-entries.html" target="_blank">Entries List</a>
+            </div>
         </div>
 
     </div>
